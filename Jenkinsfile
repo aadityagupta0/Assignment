@@ -37,7 +37,7 @@ pipeline {
             steps 
             {
 		            echo 'Performing Sonar Analysis'
-                withSonarQubeEnv("Sonar Qube")
+                withSonarQubeEnv("Sonar Qube Scanner")
                 //withSonarQubeEnv(credentialsId: '09015078aabf8896496179114579b897c6676bc0', installationName: 'sonar scanner') 
                 {
                     bat "mvn sonar:sonar"
