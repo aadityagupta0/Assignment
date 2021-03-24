@@ -40,7 +40,8 @@ pipeline {
                 withSonarQubeEnv("Sonar Qube Scanner")
                 //withSonarQubeEnv(credentialsId: '09015078aabf8896496179114579b897c6676bc0', installationName: 'sonar scanner') 
                 {
-                    bat "mvn sonar:sonar"
+                    //bat "mvn sonar:sonar"
+			mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
                 }   
             }
         }
